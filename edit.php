@@ -22,12 +22,6 @@ include("getmethod.php");
 $line=$_REQUEST['line'];
 
 
-
-
-//$id=$_REQUEST['id'];
-//$result = mysqli_query($con, $query) or die ( mysqli_error());
-//$row = mysqli_fetch_assoc($result);
-
 ?>
 
 
@@ -39,14 +33,10 @@ $line=$_REQUEST['line'];
 
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Update Taxpayer</title>
+
 <link rel="stylesheet" href="css/navbar-top.css">
-
 <link rel="stylesheet" href="css/style.css" >
-
-
  <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
 
 
 </head>
@@ -91,10 +81,6 @@ $line=$_REQUEST['line'];
   <div class="jumbotron">
 
 
-
-
-
-
 <h1  style="
   text-align: center;
   margin-bottom: 30px;">Update Taxpayer</h1> 
@@ -108,11 +94,6 @@ if(isset($_POST['new']) && $_POST['new']==1)
 	{
 
 	
-
-
-
-
-
 $update= array (
     'TPIN' => $response [$line]['TPIN'],
     'BusinessCertificateNumber' => $_REQUEST['BusinessCertificateNumber'],
@@ -126,11 +107,7 @@ $update= array (
 
 		);
 		
-		
-		
-		
-		
-		
+			
 		//session headers
 
 $apikey='Apikey :';
@@ -141,8 +118,6 @@ $apikey='Apikey :';
 
 
 
-
- 
 //send data to post method
 	
   $service_url = 'https://www.mra.mw/sandbox/programming/challenge/webservice/taxpayers/edit';
