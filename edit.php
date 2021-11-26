@@ -22,6 +22,12 @@ include("getmethod.php");
 $line=$_REQUEST['line'];
 
 
+
+
+//$id=$_REQUEST['id'];
+//$result = mysqli_query($con, $query) or die ( mysqli_error());
+//$row = mysqli_fetch_assoc($result);
+
 ?>
 
 
@@ -33,28 +39,32 @@ $line=$_REQUEST['line'];
 
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Update Taxpayer</title>
-
 <link rel="stylesheet" href="css/navbar-top.css">
+
 <link rel="stylesheet" href="css/style.css" >
+
+
  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
 
 
 </head>
 <body>
 
-<div class="header-top"  style="
-  width: 100%;
-  height: 100px;
-  background-color: green;">
+<header class="header-top"  style="
+  
+  height: 150px;
+  background-color:#0b381b;"><img style="color: white; margin-top:30px; margin-left: 30px; float:left;" src="logo/logo.png" alt="MRA Taxpayer Management APP">
 
-  <h2 style="color:white; margin-top:30px; margin-left: 30px; float:left;">MRA Taxpayer Management APP </h2
-    >
-  </div>
+   
+    
+  </header>
 
 
 
   <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-  <a class="navbar-brand" href="index.php"> MRA</a>
+  <a class="navbar-brand" href="index.php"> Taxpayer Management App |  |</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"> </span>
@@ -81,6 +91,10 @@ $line=$_REQUEST['line'];
   <div class="jumbotron">
 
 
+
+
+
+
 <h1  style="
   text-align: center;
   margin-bottom: 30px;">Update Taxpayer</h1> 
@@ -94,6 +108,11 @@ if(isset($_POST['new']) && $_POST['new']==1)
 	{
 
 	
+
+
+
+
+
 $update= array (
     'TPIN' => $response [$line]['TPIN'],
     'BusinessCertificateNumber' => $_REQUEST['BusinessCertificateNumber'],
@@ -107,7 +126,11 @@ $update= array (
 
 		);
 		
-			
+		
+		
+		
+		
+		
 		//session headers
 
 $apikey='Apikey :';
@@ -118,6 +141,8 @@ $apikey='Apikey :';
 
 
 
+
+ 
 //send data to post method
 	
   $service_url = 'https://www.mra.mw/sandbox/programming/challenge/webservice/taxpayers/edit';
@@ -170,7 +195,7 @@ required value="<?php echo $response [$line]['BusinessCertificateNumber'];?>" />
 <p><label style="float:left " for="TradingName">Trading Name: </label><input type="text" name="TradingName" placeholder="Enter TradingName" 
 required value="<?php echo $response [$line]['TradingName'];?>" /></p>
 
-<p><label style="float:left " for="BusinessRegistrationDate">Business Registration Date: </label><input type="date" name="BusinessRegistrationDate" placeholder="BusinessRegistrationDate" 
+<p><label style="float:left " for="BusinessRegistrationDate">Business Registration Date: </label><input type="date" max="<?php echo date ("Y-m-d")?>" name="BusinessRegistrationDate" placeholder="BusinessRegistrationDate" 
 required value="<?php echo $response [$line]['BusinessRegistrationDate'];?>" /></p>
 
 <p><label style="float:left "for="MobileNumber">Mobile Number: </label><input type="number" name="MobileNumber" placeholder="Enter MobileNumber" 

@@ -1,5 +1,6 @@
 <?php
-
+//require('db.php');
+//include("auth.php");
 
 
 
@@ -81,19 +82,19 @@ if(isset($_POST['new']) && $_POST['new']==1)
 <body>
  
 
-<div class="header-top"  style="
-  width: 100%;
-  height: 100px;
-  background-color: green;">
+<header class="header-top"  style="
+  
+  height: 150px;
+  background-color:#0b381b;"><img style="color: white; margin-top:30px; margin-left: 30px; float:left;" src="logo/logo.png" alt="MRA Taxpayer Management APP">
 
-  <h2 style="color:white; margin-top:30px; margin-left: 30px; float:left;">MRA Taxpayer Management APP </h2
-    >
-  </div>
+   
+    
+  </header>
 
 
 
   <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-  <a class="navbar-brand" href="index.php"> MRA</a>
+  <a class="navbar-brand" href="index.php"> Taxpayer Management App |  |</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"> </span>
@@ -130,17 +131,18 @@ if(isset($_POST['new']) && $_POST['new']==1)
 <input type="hidden" name="new" value="1" />
 
 
-<p><label style="float:left " for="TPIN">TPIN: </label><input type="number" name="TPIN" 		placeholder="Enter TPIN" required /></p>
+<p><label style="float:left " for="TPIN">TPIN: </label><input type="number" name="TPIN" 	minlength="5" maxlength="15" 	placeholder="Enter TPIN" required /></p>
+
 <p><label style="float:left " for="TradingName">Trading Name: </label><input type="text" name="TradingName" 	placeholder="Enter TradingName" required /></p>
 
-<p><p><label style="float:left " for="BusinessCertificateNumber">Business Certificate Number: </label><input type="text" name="BusinessCertificateNumber" 	placeholder="Enter BusinessCertificateNumber" required  /></p>
+<p><p><label style="float:left " for="BusinessCertificateNumber">Business Certificate Number: </label><input minlength="8" maxlength=11 type="text" name="BusinessCertificateNumber" 	placeholder="Enter BusinessCertificateNumber" required  /></p>
 
-<p><label style="float:left " for="BusinessRegistrationDate">Business Registration Date: </label> <input type="date" name="BusinessRegistrationDate" placeholder="Enter BusinessRegistrationDate" required value="<?php echo date("Y-m-d");?>"/></p>
+<p><label style="float:left " for="BusinessRegistrationDate">Business Registration Date: </label> <input type="date" max="<?php echo date ("Y-m-d")?>" name="BusinessRegistrationDate" placeholder="Enter BusinessRegistrationDate" required value="<?php echo date("Y-m-d");?>"/></p>
 
 <p><label  style="float:left " for="email">Email Address: </label><input type="Email" name="email" 		placeholder="Enter email" required /></p>
-<p><label style="float:left " for="MobileNumber">Mobile Number: </label><input type="number" name="MobileNumber" 	placeholder="Enter MobileNumber" required /></p>
+<p><label style="float:left " for="MobileNumber">Mobile Number: </label><input minlength="8" maxlength="12" type="number" name="MobileNumber" 	placeholder="Enter MobileNumber" required /></p>
 
-<p><label  style="float:left " for="PhysicalLocation">Physical Location: </label> <input type="text" name="PhysicalLocation" 	placeholder="Enter PhysicalLocation" required /></p>
+<p><label  style="float:left " for="PhysicalLocation">Physical Location: </label> <input minlength="4" maxlength="20" type="text" name="PhysicalLocation" 	placeholder="Enter PhysicalLocation" required /></p>
 
 <p><input name="submit" type="submit" value="Register" /></p>
 </form>

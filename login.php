@@ -14,17 +14,16 @@
 <body>
 
 
-	<div class="header-top"  style="
-	width: 100%;
-	height: 100px;
-	background-color: green;"
->
+	<header class="header-top"  style="
+  
+  height: 150px;
+  background-color:#0b381b;"><img style="color: white; margin-top:30px; margin-left: 30px; float:left;" src="logo/logo.png" alt="MRA Taxpayer Management APP">
 
-	<h2 style="color:white; margin-top:30px; margin-left: 30px; float:left;">MRA Tax Registration APP </h2
-		>
-	</div>
+   
+    
+  </header>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-  <a class="navbar-brand" href="index.php"> MRA</a>
+  <a class="navbar-brand" href="index.php"> Taxpayer Management App |  |</a>
   
     <ul class="navbar-nav mr-auto">
     </ul>
