@@ -23,11 +23,6 @@ $line=$_REQUEST['line'];
 
 
 
-
-//$id=$_REQUEST['id'];
-//$result = mysqli_query($con, $query) or die ( mysqli_error());
-//$row = mysqli_fetch_assoc($result);
-
 ?>
 
 
