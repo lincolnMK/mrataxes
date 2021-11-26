@@ -1,10 +1,7 @@
 <?php
-//require('db.php');
-//include("auth.php");
 
 
 session_start();
-
 
 
 if(!isset($_SESSION["username"])){
@@ -26,7 +23,6 @@ exit(); }
 <link rel="stylesheet" href="css/navbar-top.css">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
 
 
 
@@ -69,8 +65,6 @@ exit(); }
    
   </div>
 </nav>
-
-
 
 
 
