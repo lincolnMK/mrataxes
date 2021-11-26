@@ -3,8 +3,11 @@
 
 deploying on development environment (xampp/ wamp/ iis)
 
-prerequisites include:  PHP, CURL, JS/JAVA, internet.
-Copy the content of mrataxes to the localhost folder, eg htdocs for xampp.
-Start xampp server
-go to web browser and go to http://localhost/mrataxes/  and run it. 
+1. prerequisites include:  PHP, CURL, JS/JAVA, internet.
+2. Copy the folder of mrataxes to the localhost folder, eg htdocs for xampp.
+3. Start xampp server
+4. go to web browser and go to http://localhost/mrataxes/  and log in. 
+5. if using a live web server follow steps 1 only upload files and make link to */mrataxes/index.php and login 
+
+
  
